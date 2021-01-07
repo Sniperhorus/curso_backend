@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+//utilizando archivos estaticos a travez de la ruta /public con los archivos incluido en la carpeta assets
+// primer string -> Ruta de acceso a travez del navegador
+// segundo strin -> Nombre de la carpeta de archivos estaticos
+app.use('/public',express.static('assets'));
 
 app.get('/',function(req,res){
 res.sendFile('index.html',{
